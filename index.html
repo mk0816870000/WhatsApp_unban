@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manzoor WpUnban Tool</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #e0f2f1;
+    }
+
+    header {
+      background: #075e54;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 24px;
+      font-weight: bold;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .container {
+      max-width: 90%;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      animation: slideUp 1s ease;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 80px;
+      height: 80px;
+      animation: zoomIn 1s ease;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 8px;
+display: block;
+      color: #333;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button, .btn {
+      width: 100%;
+      padding: 12px;
+      background: #25d366;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 8px;
+    }
+
+    .btn:hover, button:hover {
+      background: #1ebe5d;
+    }
+
+    .copy-btn {
+      background: #00796b;
+      margin-top: 5px;
+    }
+
+    .copy-btn:hover {
+      background: #004d40;
+    }
+
+    .links {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .links a {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      background: #075e54;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .links a:hover {
+      background: #056244;
+    }
+
+    footer {
+      text-align: center;
+      background: #004d40;
+      color: #fff;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Abuzar Wp-Unban Tool</header>
+
+  <div class="container">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+    </div>
+
+    <label>Support Email:</label>
+    <input type="text" id="supportEmail" value="support@whatsapp.com" readonly>
+    <button class="copy-btn" onclick="copyText('supportEmail')">📋 Copy Email</button>
+
+    <label>Unban Request Message:</label>
+    <textarea id="unbanMessage" rows="6" readonly>
+Dear WhatsApp Support Team,
+
+I hope this message finds you well.
+
+My WhatsApp account associated with the number *+92XXXXXXXXXX* has recently been banned. I believe this may have been a mistake, as I always strive to follow WhatsApp’s terms of service and community guidelines.
+
+I kindly request you to review my account and provide clarification regarding the reason for the ban. If any unintentional violation occurred, I apologize and assure you that it will not happen again.
+
+Thank you for your time and understanding. I look forward to your positive response.
+
+Best regards,  
+*Your Name*
+    </textarea>
+    <button class="copy-btn" onclick="copyText('unbanMessage')">📋 Copy Message</button>
+
+    <div class="links">
+      <a href="" target="_blank">Join Telegram</a>
+      <a href="https://whatsapp.com/channel/0029VbAyNbhJpe8aNvDko02I" target="_blank">Join WhatsApp</a>
+    </div>
+  </div>
+<footer>All Rights Reserved © Manzoor's Studio</footer>
+
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id);
+      text.select();
+      text.setSelectionRange(0, 99999); // For mobile
+      navigator.clipboard.writeText(text.value);
+      alert("Copied!");
+    }
+  </script>
+
+</body>
+</html>
